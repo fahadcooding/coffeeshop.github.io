@@ -1,0 +1,853 @@
+:root
+{
+    --main-color:#d3ad7f;
+    --black:black;
+    --bg:black;
+    --border: 1px solid gray;
+
+}
+*
+{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none; 
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .5s;
+}
+html
+{
+    font-size: 62.5%;
+    /* overflow: hidden; */
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+
+}
+html::-webkit-scrollbar
+{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track
+{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb
+{
+    background: #fff;
+    border-radius: 5rem;
+
+}
+body
+{
+    background: var(--bg);
+}
+section
+{
+    padding: 4rem 7%;
+}
+
+.btn
+{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    font-family: cursive;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* color: white; */
+    color: rgb(53, 57, 42);
+    background-color: var(--main-color);
+    cursor: pointer;
+    transition: .2s;
+
+}
+.btn:hover
+{
+    letter-spacing: .2rem;
+    border-radius: 3px; 
+    background: rgb(232, 232, 147);
+}
+/* header section  code */
+.header
+{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+
+}
+.header .logo
+{
+height: 6 rem;
+}
+.header .navbar a
+{
+    margin: 0 1rem;
+    font-size: 1.9rem;
+    color: white;
+    transition: .2s;
+    font-family: 'Arvo', serif;
+
+}
+.header .navbar a:hover
+{
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    padding-bottom: .5rem;
+
+}
+.icons
+{
+    display: flex;
+    color: white;
+}
+.header .icons div
+{
+    color: white;
+    cursor: pointer;
+    font-family: 2.5rem;
+    margin-left: 2rem;
+    transition: 0.2sec;
+}
+.header .icons div:hover
+{
+    color: var(--main-color);
+
+}
+#menu-btn
+{
+    display: none;
+    
+}
+.header .search-form
+{
+    position: absolute;
+    top: 115%; right: 7%;
+    background: white;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active{
+
+    transform: scaleY(1);
+}
+.header .search-form input
+{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+
+
+}
+.cart-items img
+{
+    width: 70px;
+    height: 70px;
+    border-radius: 30px;
+}
+.header .cart-items-container
+{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background: white;
+    padding: 0 1.5rem;
+
+}
+.header .cart-items-container.active{
+    right:0;
+    transition-timing-function: ease-in-out;
+    transition: .6s;
+  
+}
+.cart-items-container .cart-items
+{
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.cart-items-container .cart-items h3{
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+}
+.cart-items-container .cart-items .content .price{
+    font-size: 1.5rem;
+    color: var(--main-color);
+   
+}
+.cart-items-container .btn
+{
+    width: 100%;
+    text-align: center;
+}
+/* styling for home section */
+.home
+{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(./images/bg3.jpg) no-repeat ;
+    background-size: cover;
+    background-position: center;
+}
+.home .content
+{
+    max-width: 60rem;
+}
+.home .content h3
+{
+   font-size: 6rem;
+   text-transform: uppercase;
+   color: white;
+   
+}
+.home .content p
+{
+   font-size: 1.2rem;
+   font-weight: lighter;
+   line-height: 1.8;
+   padding: 1rem 0;
+   color: #eee;
+}
+/* styling for about us */
+/* this code section  for all main heading  */
+.heading span
+{
+    color: var(--main-color);
+}
+.heading
+{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+/* end this code section  for all main heading  */
+
+.row
+{
+    display: flex;
+    width: 100%;
+    height: auto;
+    /* border: 2px solid red; */
+}
+.row .image
+{
+    width: 50%;
+    height: auto;
+    
+    /* border: 1px solid red; */
+}
+.row .image img
+{
+    width: 100%;
+    height:100%;
+    
+
+}
+
+.row .content
+{
+    width: 50%;
+    background: rgb(43, 37, 37);
+}
+.row .content p{
+ 
+    color: white;
+    padding: 2rem;
+    line-height: 1.4;
+    font-size: 1.8rem;
+    margin: 1rem;
+    
+}
+.content h3
+{
+    padding-top: 5rem;
+    color: white;
+    /* text-transform: uppercase; */
+    font-size: 2.7rem;
+    margin-left: 2rem;
+}
+.about .content a
+{
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* styling for menu section  */
+.box-container
+{
+    display: flex;
+    width: 940px;
+    margin: auto;
+}
+.box
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: rgb(55, 47, 47);
+    width: 300px;
+    height: 250px;
+    margin: 7px;
+    transition: .3s;
+    transition-timing-function: ease-in-out;
+    color: white;
+    
+}
+.box:hover
+{
+    background: white;
+    color: black;
+}
+.box-container .box img
+{
+    width: 90px;
+    height: 80px;
+    border-radius: 27px;
+}
+.box-container .box img:hover{
+    transform: scale(1.1);
+}
+.box h3
+{
+    margin-top: 3rem;
+    font-size: 2rem;
+    top: 2rem;
+    /* color: var(--main-color); */
+}
+.box .price
+{
+    font-size: 1.5rem;
+}
+.box .price span
+{
+    font-size: 1 rem;
+    text-decoration: line-through;
+}
+.box .btn
+{
+    margin-top: 4rem;
+}
+/* styling for products  */
+.pro-container
+{
+    display: flex;
+    width: 940px;
+    margin: auto;
+    flex-direction: row;
+}
+.pro-container .box
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    /* justify-content: center; */
+    background: rgb(55, 47, 47);
+    width: 300px;
+    height: 400px;
+    margin: 7px;
+    transition: .3s;
+    transition-timing-function: ease-in-out;
+    color: white;
+    
+}
+.pro-container .box h3
+{
+  font-size: 3rem;
+}
+
+.pro-container img
+{
+    width: 200px;
+    height: 250px;
+    border-radius: 4px;
+    margin-top: 3px;
+}
+#picn
+{
+    display: flex;
+    margin-top: 11px;
+    
+}
+#picn .picon
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    /* background: gray; */
+    width: 40px;
+    height: 40px;
+    margin: 3px;
+    transition: .2s;
+    transition-timing-function: ease-in-out;
+}
+.picon:hover
+{
+    background: white;
+}
+#picn .picon img
+{
+    width: 30px;
+    height: 30px;
+}
+.rimg
+{
+    width: 100px;
+    height: 20px;
+    /* border: 1px solid red; */
+   
+}
+.rimg .ricon 
+{
+    width: 90px;
+    height: 76px;
+    margin-top: -29px;
+}
+ /* sttylin for review */
+ .review
+{
+    display: flex;
+    width: 940px;
+    margin: auto;
+    flex-direction: row;
+}
+.review .rbox
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    /* justify-content: center; */
+    background: rgb(55, 47, 47);
+    width: 300px;
+    height: 350px;
+    margin: 8px;
+    transition: .2s;
+    transition-timing-function: ease-in-out;
+    color: white;
+    
+}
+.review .rbox:hover
+{
+    color: black;
+    background: white;
+}
+.review .rbox p
+{
+    font-size: 1.3rem;
+    line-height: 1.6;
+    text-align: justify;
+    text-align: center;
+    margin: 1rem;
+}
+.cimg
+{
+    width: 80px;
+    height: 70px;
+    border-radius: 30px;
+    /* border: 1px solid red; */
+}
+.cimg .cuimg
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+}
+.review .rbox h3{
+    font-size: 1.8rem;
+}
+/* styling for contact section  */
+.contact .con
+{
+    display: flex;
+    width: 940px;
+    margin: auto;
+    flex-direction: row;
+}
+.con .cbox 
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: rgb(55, 47, 47);
+    width: 50%;
+    height: 350px;
+    margin: 3px;
+    transition: .2s;
+    transition-timing-function: ease-in-out;
+    color: white;
+}
+.cbox iframe
+{
+    width: 100%;
+    height: 100%;
+}
+.cbox form
+{
+    margin: 62px;
+    width: 90%;
+
+
+}
+.cbox form input
+{
+    width: 80%;
+    margin: 13px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    padding: 2rem;
+}
+.cbox form .inputbox label
+{
+    font-size: 15px;
+
+}
+form h3{
+    font-size: 2.8rem;
+    text-transform: uppercase;
+}
+
+/* styling for belogs section */
+
+.blogs-container
+{
+    
+    display: flex;
+    width: 940px;
+    margin: auto;
+}
+.blogs-container .bbox
+{
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    /* align-items: center;
+    justify-content: center; */
+    background: black;
+    border: 1px solid rgb(75, 59, 59);
+    border-radius: 3px;
+    width: 50%;
+    height: 350px;
+    margin: 3px;
+}
+.bimage
+
+{
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 50%;
+    margin-top: 0;
+    overflow: hidden;
+} 
+.bimage  img
+{
+    margin-top: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.bimage  img:hover
+{
+    transform: scale(1.5);
+}
+.bbox h3{
+    font-size: 1.2rem;
+}
+.bbox .content 
+{
+    margin-left: 0;
+    /* border: 1px solid red; */
+    padding: 1.5rem;
+    margin-top: 0;
+    height: 50%;
+    line-height: 2.5rem;
+}
+.bbox .content #p1{
+      font-size: 1.9rem;
+      text-transform: capitalize;
+      color: #fff;
+      margin-left: 0;
+}
+.bbox .content span
+{
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+.bbox .content #p2
+{
+    color: white;
+    font-size: 1rem;
+}
+.bbox .content .btn
+{
+    padding: 0.5rem 1.5rem;
+}
+
+/* styling for footer  */
+
+.foter
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    
+
+}
+.share a
+{
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: black;
+    padding: 7px 7px;
+    background: rgb(239, 254, 207);
+    border-radius: 4px;
+    transition: .2s;
+    font-family: 'Arvo', serif;
+}
+.share a:hover{
+    background: var(--main-color);
+}
+.credit
+{
+    color: white;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    margin-top: 25px;
+}
+.credit span
+{
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media(max-width:991px)
+{
+    html 
+    {
+        font-size: 55%;
+    }
+    .header
+    {
+        padding: 1.5rem 2rem;
+    }
+    section
+{
+    padding: 3rem;
+}
+@media(max-width: 928px)
+{
+
+}
+}
+@media(max-width:768px)
+{
+   #menu-btn
+   {
+    display: inline-block;
+   }
+   .header .navbar
+   {
+    position: absolute;
+    top: 100%; right: -100%;
+    background: white;
+    width: 30rem;
+    height:calc(100vh - 9.5rem);
+    
+   }
+   .header .navbar.active
+   {
+    right: 0;
+    transition-timing-function: ease-in-out;
+    transition: .6s;
+
+   }
+   .header .navbar a
+   {
+    color: var(--black);
+    display: block;
+    margin: 1.5rem;
+    padding: .5rem;
+    font-size: 2rem;
+
+   }
+   .header .search-form
+   {
+    width: 90%;
+    right: 2rem;
+   }
+   .home{
+    background-position: left;
+    justify-content: center;
+    text-align: center;
+   }
+   .home .content p{
+    font-size: 1.5rem;
+   }
+
+   /* styling for about us section */
+    .about .content h3
+   {
+    text-align: center;
+    font-size: rem;
+    margin-left: 1rem;
+   }
+   .row
+   {
+    flex-direction: column; 
+    align-items: center;
+   }
+   .row .image
+   {
+    width: 100%;
+   }
+   .row .image img
+   {
+    width: 100%;
+   }
+   .row .content
+   {
+    width: 100%;
+    
+   }
+   .row .content p{
+ 
+    color: white;
+    padding: 2rem;
+    line-height: 1.4;
+    font-size: 1.6rem;
+    margin: 1rem;
+    
+}
+/* for menu/ */
+
+.box-container
+{
+     flex-direction: column;
+     align-items: center;
+     width: auto;
+}
+.box-container .box
+{
+  width: 100%;   
+}
+.review
+{
+     flex-direction: column;
+     align-items: center;
+     width: auto;
+}
+.review .rbox
+{
+  width: 100%;  
+  padding: 2.5rem;
+
+}
+.review .rbox p
+{
+  font-size: 1.5rem;
+}
+
+/* for products */
+.pro-container
+{
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+.pro-container .box
+{
+  width: 100%;   
+}
+/* for contact section media query */
+.contact .con
+{
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+.con .cbox
+{
+    width: 100%;  
+}
+.cbox form input
+{
+    width: 73%;
+}
+.blogs-container
+{
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+.blogs-container .bbox
+{
+    width: 100%;
+    border: none;
+}
+.share a
+{
+    margin: 0 0.5rem;
+    font-size: 1.8rem;
+    color: black;
+    padding: 4px 4px;
+}
+}
+
+@media(max-width:450px)
+{
+    html 
+    {
+        font-size: 50%;
+    }
+   
+
+    
+}
